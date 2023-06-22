@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+.app {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  grid-template-areas: "header  header header header"
+    "peliculas peliculas peliculas buscador" 
+    "footer footer  footer footer";
+    grid-template-rows: auto auto 70px;
+}
+@media screen and (max-width:773px){  
+  .app{
+    grid-template-areas: "header  header"
+    "buscador buscador" 
+    "peliculas peliculas"
+    "footer footer";
+    grid-template-rows: auto;
+  }
+}
+.header {
+  grid-area: header;
+  background-color: #282c34dd;
+  color: #fff;
+}
+.peliculas {
+  grid-area: peliculas;
+  background-color: #f6f7f9;
+  min-height: calc(100vh - 130px);
+}
+.buscador {
+  grid-area: buscador;
+  background-color: #f6f7f9;
+  border-left: 1px solid #ddd;
+  padding: 18px;
+}
+.footer {
+  grid-area: footer;
+}
+
+
+/* CSS DEL HEADER */
+.contenedor-header, .contenedor-logo{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  padding: 5px;
+  
+}
+.contenedor-logo h3, .contenedor-logo i{
+  margin-left: 20px;
+  font-size: 25px;
+  color: #d87cac;
+}
+.contenedor-nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+.contenedor-nav li{
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+}
+.contenedor-nav li:hover{
+  scale: 1.2;
+  color: #a494ef;
+}
+
+/* CSS DEL CONTENIDO */
+
+.contenedor-peliculas{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+.contenedor-tarjeta{
+  margin: 20px 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #ddd;
+  padding: 40px 25px 0px 25px;
+  max-width: 300px;
+
+}
+@media screen and (max-width:1025px){  
+  .contenedor-tarjeta{
+    margin: 20px 0px;
+  }
+}
+
+/* CSS DEL BUSCADOR */
+.contenedor-buscador{
+  display: block;
+  margin: 0 auto;
+  padding: 18px;
+  width: 90%;
+  text-align: center;
+  height: auto;
+  
+  box-shadow: 0px 0px 6px #b0b0b0;
+}
+
+
+/* CSS DEL FOOT */
+.contenedor-foot{
+  background-color: #282c34dd;
+  color: #fff;
+  border-top: 1px solid white;
+  text-align: center;
+  padding: 25px 0;
+}
+
+/* 
+CSS DE MODEL */
+
+.Overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .9);
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-modal{
+  width: 500px;
+  min-width: 100px;
+  background-color: #f9f9f9;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+  padding: 20px;
+}
+.botonX{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.Botones{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+
+.BotonAgregar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.botonColor{
+  background-color: #d87cacaa !important;
+}
+
+.color{
+  color: #d87cac;
+}
