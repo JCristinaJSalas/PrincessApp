@@ -48,7 +48,7 @@ const Peliculas = ({ pelisState, setPeliculas }) => {
       )}
 
       <div className="contenedor-peliculas">
-        {pelisState === [] || pelisState === null ? (
+        {pelisState.length === 0 || pelisState === null ? (
           <div>
             <br />
             <h3>Aun no hay peliculas.</h3>

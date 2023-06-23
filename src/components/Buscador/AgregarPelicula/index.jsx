@@ -21,10 +21,13 @@ const CrearPelicula = ({ setPeliculas }) => {
       descripcion: data.descripcion.value,
       url: data.url.value,
     };
+    
     setDataPeliculas(pelicula);
+
     setPeliculas((elementos) => {
       return [...elementos, pelicula];
     });
+
     SaveLocalStorage("pelicula", pelicula);
     data.titulo.value = "";
     data.descripcion.value = "";

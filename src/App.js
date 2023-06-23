@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [pelis, setPeliculas] = useState([]);
-  
+  console.log(pelis)
   return (
     <div className="app">
       <div className="header">
